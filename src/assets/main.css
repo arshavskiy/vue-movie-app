@@ -1,8 +1,7 @@
 @import './base.css';
 
 #app {
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 2em auto;
 
     font-weight: normal;
 }
@@ -40,6 +39,19 @@ a,
         /*width: calc(100vw - 60px);*/
         overflow-x: scroll;
         padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .movie-card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        :last-child {
+            display: flex;
+            align-items: center;
+        }
     }
 
 

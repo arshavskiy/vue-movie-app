@@ -9,15 +9,12 @@ export const useMoviesStore = defineStore('movies', {
     recentMovies: [],
     chartData: null,
     page: 1,
-    hasMore: true,
     totalPages: 10,
   }),
   actions: {
     async loadPopularMovies(reset = false) {
       const response = await fetchPopularMovies(this.page)
-      const newMovies = response.data.results.filter(
-        (movie, index, self) => index === self.findIndex((m) => m.id === movie.id),
-      )
+      const newMovies = response.data.results
 
       if (reset) {
         this.popularMovies = newMovies
@@ -28,7 +25,6 @@ export const useMoviesStore = defineStore('movies', {
       if (this.totalPages === this.page){
         this.totalPages = this.totalPages + 10;
       }
-      this.hasMore = newMovies.length > 0
     },
     searchMovies(query) {
       if (!query.trim()) {

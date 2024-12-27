@@ -15,20 +15,13 @@ Add a VITE_PARAMETER NAME property as needed
 import via import.meta.env.VITE_<PARAMETER NAME>
 ```
 
-```sh
-npm install
-```
 
 ### Compile and Hot-Reload for Development
 
 ```sh
+cd vue-movie-app
+npm install
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
 ```
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)

@@ -32,6 +32,10 @@ const movieUrl = computed(() => {
 </script>
 
 <style>
+.movie-card img{
+  min-height: 330px;
+  min-width: 220px;
+}
 .movie-card__rating {
   z-index: 2;
   position: absolute;
@@ -52,6 +56,6 @@ const movieUrl = computed(() => {
 }
 
 .movie-card:hover {
-  transform: scale(1.01);
+  transform: scale(1.05);
 }
 </style>
