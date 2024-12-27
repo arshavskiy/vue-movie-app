@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h2 class="text-center mt-8">Movies Released in the Last 90 Days</h2>
     <Bar :data="chartData" :options="chartOptions" />
   </div>
 </template>
@@ -42,7 +43,6 @@ const chartOptions = {
     },
     title: {
       display: true,
-      text: 'Movies Released in the Last 90 Days',
     },
   },
 }

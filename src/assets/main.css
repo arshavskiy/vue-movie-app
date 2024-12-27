@@ -34,7 +34,7 @@ a,
 @media (min-width: 800px) {
 
     .movies {
-        min-height: 300px;
+        min-height: 475px;
         display: flex;
         flex-direction: row;
         /*width: calc(100vw - 60px);*/
