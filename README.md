@@ -2,15 +2,15 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+#### Create API key for THEMOVIEDB
+Look at .env.example file
+create .env file 
+Add a VITE_<PARAMETER NAME> as needed
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+```sh
+import via import.meta.env.VITE_<PARAMETER NAME>
+```
 
 ```sh
 npm install
