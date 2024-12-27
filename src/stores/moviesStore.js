@@ -58,7 +58,7 @@ export const useMoviesStore = defineStore('movies', {
         labels: Object.keys(counts),
         datasets: [
           {
-            label: 'Movies Released',
+            label: 'Amount Of Movies Released',
             data: Object.values(counts),
             backgroundColor: '#007bff',
             borderColor: '#fff',
