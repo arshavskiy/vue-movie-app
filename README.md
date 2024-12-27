@@ -15,6 +15,7 @@ Add a VITE_PARAMETER NAME property as needed
 import via import.meta.env.VITE_<PARAMETER NAME>
 ```
 
+##### When testing UI please refresh the page between desktop and mobile
 
 ### Compile and Hot-Reload for Development
 
