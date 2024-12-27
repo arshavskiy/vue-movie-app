@@ -3,10 +3,13 @@
 This template should help get you started developing with Vue 3 in Vite.
 
 
-#### Create API key for THEMOVIEDB
+#### Create API key for THEMOVIEDB, use BAERER
+
 Look at .env.example file
+
 create .env file 
-Add a VITE_<PARAMETER NAME> as needed
+
+Add a VITE_<PARAMETER NAME> property as needed
 
 ```sh
 import via import.meta.env.VITE_<PARAMETER NAME>
