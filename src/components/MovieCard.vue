@@ -3,8 +3,8 @@
     <div>
       <img :src="movieUrl" :alt="movie.title" />
     </div>
-    <div class="flex flex-col justify-center ml-3 items-center w-full relative">
-      <h3 class="pb-2 font-bold">{{ movie.title }}</h3>
+    <div class="flex flex-col ml-3 w-full relative">
+      <h3 class="font-bold">{{ movie.title }}</h3>
       <div class="movie-card__date">{{ movie.release_date }}</div>
       <div class="movie-card__rating">
         {{ movie.vote_average.toFixed(1) }}
