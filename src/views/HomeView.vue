@@ -68,7 +68,3 @@ const viewMovieDetails = (id) => {
   window.location.href = `/movie/${id}`
 }
 </script>
-
-<style>
-
-</style>
