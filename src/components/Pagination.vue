@@ -9,6 +9,10 @@
       </span>
     </div>
 
+    <div v-else>
+      {{ currentPage }}
+    </div>
+
     <button :disabled="currentPage === totalPages" @click="changePage(currentPage + 1)">
       Next
     </button>
