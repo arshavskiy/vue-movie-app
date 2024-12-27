@@ -59,6 +59,7 @@ export const useMoviesStore = defineStore('movies', {
             backgroundColor: '#007bff',
             borderColor: '#fff',
             borderWidth: 0,
+            maxBarThickness: 5
           },
         ],
       }
