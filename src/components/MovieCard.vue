@@ -1,12 +1,14 @@
 <template>
-  <div class="movie-card flex flex-row" @click="handleClick">
+  <div class="movie-card" @click="handleClick">
     <div>
       <img :src="movieUrl" :alt="movie.title" />
     </div>
-    <div class="flex flex-col justify-center ml-3 items-center w-full">
-      <h2 class="pb-2">{{ movie.title.toUpperCase() }}</h2>
-      <p>Release Date: {{ movie.release_date }}</p>
-      <p>Rating: {{ movie.vote_average }}</p>
+    <div class="flex flex-col justify-center ml-3 items-center w-full relative">
+      <h3 class="pb-2 font-bold">{{ movie.title }}</h3>
+      <div class="movie-card__date">{{ movie.release_date }}</div>
+      <div class="movie-card__rating">
+        {{ movie.vote_average.toFixed(1) }}
+      </div>
     </div>
   </div>
 </template>
@@ -30,15 +32,26 @@ const movieUrl = computed(() => {
 </script>
 
 <style>
+.movie-card__rating {
+  z-index: 2;
+  position: absolute;
+  top: -30px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 5px;
+  color: #f2f2f2;
+}
+
 .movie-card {
-  border: 1px solid #ddd;
   padding: 1rem;
-  border-radius: 8px;
   cursor: pointer;
   transition: transform 0.2s;
 }
 
 .movie-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 </style>
