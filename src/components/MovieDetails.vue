@@ -17,7 +17,7 @@
 
 <script setup>
 import { useMoviesStore } from '../stores/moviesStore';
-import { computed, onBeforeMount, onMounted } from 'vue'
+import { computed, onBeforeMount} from 'vue'
 import { storeToRefs } from 'pinia'
 
 const moviesStore = useMoviesStore();

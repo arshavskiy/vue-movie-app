@@ -19,13 +19,13 @@
           @click="viewMovieDetails(movie.id)"
         />
       </div>
-      <Pagination
+      <PaginationElm
         :current-page="moviesStore.page"
         :total-pages="moviesStore.totalPages"
         @change-page="handlePageChange"
       />
     </div>
-    <LineChart v-if="moviesStore.chartData" :chart-data="moviesStore.chartData" style="height: 400px" class="flex flex-col items-center"/>
+    <LineChart v-if="moviesStore.chartData" :chart-data="moviesStore.chartData" style="max-height: 350px" class="flex flex-col items-center"/>
   </div>
 </template>
 
@@ -33,7 +33,7 @@
 import { ref, computed } from 'vue'
 import { useMoviesStore } from '../stores/moviesStore'
 import { debounce } from 'lodash'
-import Pagination from '../components/Pagination.vue'
+import PaginationElm from '../components/Pagination.vue'
 import MovieCard from '../components/MovieCard.vue'
 import LineChart from '../components/LineChart.vue'
 
