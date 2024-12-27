@@ -9,7 +9,7 @@ Look at .env.example file
 
 create .env file 
 
-Add a VITE_<PARAMETER NAME> property as needed
+Add a VITE_PARAMETER NAME property as needed
 
 ```sh
 import via import.meta.env.VITE_<PARAMETER NAME>
