@@ -60,9 +60,9 @@ export const useMoviesStore = defineStore('movies', {
           {
             label: 'Movies Released',
             data: Object.values(counts),
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1,
+            backgroundColor: '#007bff',
+            borderColor: '#fff',
+            borderWidth: 0,
           },
         ],
       }

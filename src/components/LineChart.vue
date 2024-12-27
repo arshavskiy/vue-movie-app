@@ -47,12 +47,4 @@ const chartOptions = {
   },
 }
 
-// const chartData = {
-//   labels: [ 'January', 'February', 'March' ],
-//   datasets: [ { data: [40, 20, 12] } ]
-// }
 </script>
-
-<style>
-/* Add styles as needed */
-</style>

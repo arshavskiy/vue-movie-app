@@ -25,7 +25,7 @@
         @change-page="handlePageChange"
       />
     </div>
-    <LineChart v-if="moviesStore.chartData" :chart-data="moviesStore.chartData" />
+    <LineChart v-if="moviesStore.chartData" :chart-data="moviesStore.chartData" style="height: 400px" class="flex flex-col items-center"/>
   </div>
 </template>
 
