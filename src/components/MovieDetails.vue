@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text-center">
     <img :src="movieUrl" :alt="movieDetails?.title">
     <h1>{{ movieDetails?.title.toUpperCase() }}</h1>
 
