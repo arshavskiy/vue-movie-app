@@ -6,7 +6,7 @@ import UnoCSS from 'unocss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  publicPath: '/vue-movie-app/',
+  base: "/vue-movie-app/",
   plugins: [vue(), UnoCSS()],
   resolve: {
     alias: {
