@@ -50,6 +50,7 @@ export const useMoviesStore = defineStore('movies', {
         acc[date] = (acc[date] || 0) + 1
         return acc
       }, {})
+
       this.chartData = {
         labels: Object.keys(counts),
         datasets: [
