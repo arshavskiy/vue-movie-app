@@ -4,7 +4,7 @@ import { fetchPopularMovies, fetchMovieDetails, fetchRecentMovies } from '../api
 export const useMoviesStore = defineStore('movies', {
   state: () => ({
     popularMovies: [],
-    movieDetails: null,
+    movieDetails: [],
     filteredMovies: [],
     recentMovies: [],
     chartData: null,
