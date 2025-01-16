@@ -42,6 +42,9 @@ import MovieCard from '../components/MovieCard.vue'
 import LineChart from '../components/LineChart.vue'
 
 import { NInput } from 'naive-ui'
+import router from '@/router/index.js'
+// import { useRouter } from 'vue-router';
+// const router = useRouter();
 
 const moviesStore = useMoviesStore()
 moviesStore.loadPopularMovies()
@@ -69,6 +72,8 @@ const handlePageChange = (page) => {
 }
 
 const viewMovieDetails = (id) => {
-  window.location.href = `/movie/${id}`
+  router.push({
+    path: `/movie/${id}`
+  });
 }
 </script>

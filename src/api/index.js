@@ -7,7 +7,7 @@ const axiosInstance = axios.create({
   baseURL: BASE_URL,
   headers: {
     accept: 'application/json',
-    Authorization: Authorization,
+    Authorization: `Bearer ${Authorization}`,
   },
 });
 
