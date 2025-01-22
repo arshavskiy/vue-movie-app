@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const BASE_URL = 'https://api.themoviedb.org/3';
-const Authorization = import.meta.env.VITE_THEMOVIEDB_BAERER
+const Authorization = import.meta.env.VITE_API_KEY
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
