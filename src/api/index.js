@@ -11,18 +11,18 @@ const axiosInstance = axios.create({
   },
 });
 
-export const fetchPopularMovies = (page = 1) =>
-  axiosInstance.get(`/movie/popular?page=${page}`);
+export const fetchPopularMovies = async (page = 1) =>
+  await axiosInstance.get(`/movie/popular?page=${page}`);
 
 export const fetchMovieDetails = (id) =>
   axiosInstance.get(`/movie/${id}`);
 
-export const fetchRecentMovies = () => {
+export const fetchRecentMovies = async () => {
   const today = new Date().toISOString().split('T')[0];
   const ninetyDaysAgo = new Date(new Date().setDate(new Date().getDate() - 90))
     .toISOString()
     .split('T')[0];
-  return axiosInstance.get(
+  return await axiosInstance.get(
     `/discover/movie?primary_release_date.gte=${ninetyDaysAgo}&primary_release_date.lte=${today}`
   );
 };

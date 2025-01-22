@@ -34,7 +34,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onBeforeMount } from 'vue'
 import { useMoviesStore } from '../stores/moviesStore'
 import { debounce } from 'lodash'
 import PaginationElm from '../components/Pagination.vue'
@@ -44,9 +44,7 @@ import LineChart from '../components/LineChart.vue'
 import { NInput } from 'naive-ui'
 import router from '@/router/index.js'
 
-const moviesStore = useMoviesStore()
-moviesStore.loadPopularMovies()
-moviesStore.loadRecentMovies()
+const moviesStore = useMoviesStore();
 
 const searchQuery = ref('')
 const debouncedSearch = debounce(() => {
@@ -74,4 +72,9 @@ const viewMovieDetails = (id) => {
     path: `/movie/${id}`
   });
 }
+
+onBeforeMount(async ()=>{
+  await moviesStore.loadPopularMovies()
+  await moviesStore.loadRecentMovies()
+})
 </script>
